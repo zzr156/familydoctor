@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 指定字符编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 是否为开发模式 -->
+	<constant name="struts.devMode" value="false" />
+
+	<!-- 使自动注入总是有效 -->
+	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" />
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <!-- 控制上传文件大小 -->
+    <constant name="struts.multipart.maxSize" value="10000000000" />
+
+    <constant name="struts.action.extension" value="action"></constant>
+
+
+    <package name="all" extends="json-default">
+        <interceptors>
+            <!-- 定义用户验证拦截器,,其它struts的配置文件中的包需要继承all包 -->
+            <interceptor name="userIntecepter" class="com.ylz.packaccede.fiter.LoginIntecepter" />
+            <!-- 定义拦截栈   -->
+            <interceptor-stack name="mydefault">
+                <!-- 指定引用的拦截器 -->
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="userIntecepter" />
+            </interceptor-stack>
+        </interceptors>
+        <!-- 定义默认拦截器 -->
+        <default-interceptor-ref name="mydefault" />
+        <!-- 定义全局处理结果 -->
+        <global-results>
+            <!-- 逻辑名为login的结果，映射到/login.jsp页面 -->
+            <result name="login" >/open/timeout.jsp</result>
+            <result name="role">/open/role.jsp</result>
+            <result name="error">/open/error.jsp</result>
+            <result name="emperorindex">/open/ipad/index.jsp</result>
+            <result name="emperorlogin">/open/ipad/login.jsp</result>
+        </global-results>
+
+    <!--    <global-exception-mappings>
+            <exception-mapping result="error" exception="java.lang.Exception">
+            </exception-mapping>
+        </global-exception-mappings> -->
+
+    </package>
+   
+</struts>

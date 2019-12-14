@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/task
+       http://www.springframework.org/schema/task/spring-task.xsd">
+
+
+    <!--&lt;!&ndash;test测试&ndash;&gt;-->
+	<bean id="manageTotalJob" class="com.ylz.task.ManageTotalJob"/>
+    <bean id="webJob" class="com.ylz.task.UpWebJob"/>
+    <bean id="testJob" class="com.ylz.task.TestJob"/>
+    <task:scheduler id="sch" pool-size="10"/>
+
+	<!-- 管理端数据统计 -->
+	<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="manageTotalJob" method="appManageTotalCount" cron="30 30 23 * * ?"/>
+	</task:scheduled-tasks>
+	<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="manageTotalJob" method="appExerciseTotalCount" cron="00 00 03 * * ?"/>
+	</task:scheduled-tasks>
+	<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="manageTotalJob" method="appExerciseNewTotalCount" cron="00 00 01 * * ?"/>
+	</task:scheduled-tasks>
+    <!-- <task:scheduled-tasks scheduler="sch">
+            <task:scheduled ref="manageTotalJob" method="performanceRankingsCount" cron="00 00 02 * * ?"/>
+        </task:scheduled-tasks>-->
+	<!-- 莆田往前置机取农合参保数据 -->
+	<!--<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="testJob" method="ptGetNhSignSsc" cron="30 30 22 * * 6"/>
+	</task:scheduled-tasks>-->
+    <!-- 莆田签约数据推送前置机-->
+    <!--<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="testJob" method="ptSignToYiBaoQzj" cron="0 0 1 * * ?"/>
+	</task:scheduled-tasks>-->
+	<!-- 莆田取前置机更新SignForm状态为2-->
+	<!--<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="testJob" method="ptYiBaoQzjToSign" cron="0 0 4 * * ?"/>
+	</task:scheduled-tasks>-->
+
+	<!-- 用药提醒 -->
+	<!--<task:scheduled-tasks scheduler="sch">
+		&lt;!&ndash;<task:scheduled ref="testJob" method="drugReminder" cron="0 0/5 * * * ?"/>&ndash;&gt;
+		<task:scheduled ref="testJob" method="drugReminder" cron="10 * * * * ?"/>
+	</task:scheduled-tasks>-->
+    <!-- 随访高血压上传到基卫 -->
+    <!--<task:scheduled-tasks scheduler="sch">-->
+        <!--<task:scheduled ref="webJob" method="savePressure" cron="5 * *  * * ?"/>-->
+    <!--</task:scheduled-tasks>-->
+    <!-- 随访糖尿病上传到基卫 -->
+    <!--<task:scheduled-tasks scheduler="sch">-->
+        <!--<task:scheduled ref="webJob" method="saveTnbPressure" cron="5 * *  * * ?"/>-->
+    <!--</task:scheduled-tasks>-->
+    <!--&lt;!&ndash; 声明一个具有一个线程的池，如果定义多个，每个对象将获取同样的运行机会 &ndash;&gt;-->
+    <!--  <task:scheduler id="sch" pool-size="10"/>
+     <task:scheduled-tasks scheduler="sch">
+         <task:scheduled ref="webJob" method="upWebTask" cron="5 */10 *  * * ?"/>
+     </task:scheduled-tasks>
+      <task:scheduled-tasks scheduler="sch">
+         <task:scheduled ref="webJob" method="createEaseTask" cron="0 0/30 * * * ? "/>
+     </task:scheduled-tasks>
+      引用线程池
+     <task:scheduled-tasks scheduler="sch">
+         <task:scheduled ref="testJob" method="test" cron="5 * *  * * ?"/>
+     </task:scheduled-tasks>
+     <task:scheduled-tasks scheduler="sch">
+         <task:scheduled ref="testJob" method="jobPlan" cron="5 * *  * * ?"/>
+     </task:scheduled-tasks>-->
+    <!--体检提醒-->
+    <!--<task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="medicalAlert" cron="5 * *  * * ?"/>
+    </task:scheduled-tasks>-->
+    <!--药品存量预警-->
+    <!--<task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="drugRunOut" cron="5 * *  * * ?"/>
+    </task:scheduled-tasks>-->
+    <!--孕产妇保健计划提醒-->
+    <!--<task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="pregnantPlan" cron="5 * *  * * ?"/>
+    </task:scheduled-tasks>-->
+    <!--续约调度-->
+ <!--   <task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="renewalReminder" cron="5 * *  * * ?"/>
+    </task:scheduled-tasks>-->
+    <!--儿童体检免疫提醒-->
+  <!-- <task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="chileInoculation" cron="5 * *  * * ?"/>
+    </task:scheduled-tasks>-->
+    <!-- 随访提醒-->
+<!--    <task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="followVisit" cron="5 * *  * * ?"/>
+    </task:scheduled-tasks>-->
+	<!--每天8点和16点调用-->
+  <!-- <task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="followNow" cron="0 0 8,16  * * ?"/>
+    </task:scheduled-tasks>-->
+	<!--定期推送健康教育-->
+<!--	<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="testJob" method="fshealthE" cron="5 * *  * * ?"/>
+	</task:scheduled-tasks>-->
+	<!--每月1号24点初始医生履约提醒状态-->
+	<!--<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="testJob" method="changeTxState" cron="0 0 24  * 1 ?"/>
+	</task:scheduled-tasks>-->
+	<!--<task:scheduled-tasks scheduler="sch">
+		<task:scheduled ref="testJob" method="saveTzShuju" cron="5 * *  * * ?"/>
+	</task:scheduled-tasks>-->
+    <!--修改签约状态-->
+   <!-- <task:scheduled-tasks scheduler="sch">
+        <task:scheduled ref="testJob" method="chageSignState" cron="0 0 0  * * ?"/>
+    </task:scheduled-tasks>-->
+    <!--死亡解约调度-->
+    <!--<task:scheduled-tasks scheduler="sch">-->
+    <!--<task:scheduled ref="testJob" method="surrenderSign" cron="0 0 0 * * ?"/>-->
+    <!--</task:scheduled-tasks>-->
+    <!--服务包冗余字段填充调度-->
+    <!-- <task:scheduled-tasks scheduler="sch">
+     <task:scheduled ref="testJob" method="dealWithServeMeal" cron="00 00 1 * * ?"/>
+     </task:scheduled-tasks>-->
+    <!--
+    cron表达式：－是用空格分开的时间字段，不使用年。
+    *(秒0-59) *(分钟0-59) *(小时0-23) *(日期1-31) *(月份1-12或是JAN-DEC) *(星期1-7或是SUN-SAT)
+    示例：
+    */5 * * * * 6-7 :: 每个周6到周日，每隔5秒钟执行一次。
+    */1 * * 7-9 1-2 1-7 :: 1月到2月中的7号到9号，且必须要满足周一到周日，每隔1秒钟执行一次。
+    */1 * * 7-9 1,5 1-7 :: 注意里面的,(逗号)，只有1月和5月的7到9号，且必须要满足周一到周日，每一秒钟执行一次。
+    */1 17-59 * 7-9 1,5 1-7 :: 只解释17-59,是指从第17分钟到第59分钟，在指定的时间内，每一秒种执行一次
+    * 17-59 * 7-9 1,5 1-7 :: 此代码的功能与上面完全相同。如果不写秒即为每一秒执行一次。
+    59 19-23 * 7-9 1,5 1-7 :: 19分-23分的每59秒钟时只执行一次。
+    59 19,26 * 7-9 1,5 1-7 :: 注意里面的,(逗号)，是指只有19分或是26分的56秒钟时执行一次。
+    * * 16-23 7-9 1,5 1-7 :: 定义每天的16点到23点每一秒钟执行一次。
+    59 59 23 * * 1-5 :: 定义每周1到周5,晚上23:59:59秒只执行一次。这个相当用有。可以工作时间每天给用户发邮件。
+    反斜线（/）字符表示增量值。例如，在秒字段中“5/15”代表从第 5 秒开始，每 15 秒一次。
+    问号（?）字符和字母 L 字符只有在月内日期和周内日期字段中可用。问号表示这个字段不包含具体值。所以，如果指定月内日期，可以在周内日期字段中插入“?”，表示周内日期值无关紧要。字母 L 字符是 last 的缩写。放在月内日期字段中，表示安排在当月最后一天执行。在周内日期字段中，如果“L”单独存在，就等于“7”，否则代表当月内周内日期的最后一个实例。所以“0L”表示安排在当月的最后一个星期日执行。
+    在月内日期字段中的字母（W）字符把执行安排在最靠近指定值的工作日。把“1W”放在月内日期字段中，表示把执行安排在当月的第一个工作日内。
+    井号（#）字符为给定月份指定具体的工作日实例。把“MON#2”放在周内日期字段中，表示把任务安排在当月的第二个星期一。
+    星号（*）字符是通配字符，表示该字段可以接受任何可能的值。
+    -->
+    
+     <!-- 缺省的异步任务线程池 -->   
+	<task:annotation-driven executor="asyncExecutor" />  
+	<task:executor id="asyncExecutor" pool-size="100-10000" queue-capacity="10" />  
+
+</beans>

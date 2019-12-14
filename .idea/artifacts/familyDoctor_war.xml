@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="familyDoctor:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>familyDoctor</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="familyDoctor-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="familyDoctor:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ylz.common.SysConf>
+  <items>
+    <com.ylz.common.ConfAttr id="news_file" desc="新闻附件" value="D:\file\"/>
+  </items>
+</com.ylz.common.SysConf>
+

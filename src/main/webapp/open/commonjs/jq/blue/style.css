@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{ 
+		font-family: 'museo500';
+	    src: url('../fonts/MuseoSans_500-webfont.eot');
+	    src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
+	         url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+	         url('../fonts/MuseoSans_500-webfont.svg#museo_sans_500regular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+*{
+	margin:0; 
+	padding:0;}
+html{
+	width:100%;
+	height:100%;}
+body{ width: 100%;height:100%;overflow-y:auto; overflow-x:hidden; ffont-family: "museo500";	font-weight: 400; font-size: 14px; color: #999;background-color:#fff;text-align:center;}
+a,a:link{	text-decoration: none;color:#254689;}
+a:hover{text-decoration:underline;color: #D72521;}
+input{ width:150px; vertical-align:text-bottom;}
+input[type=button]{ width:40px;}
+input[type=submit]{ width:40px;}
+select{ width:150px;}
+table{
+	text-align:left;
+	line-height:28px;
+}
+div{
+	margin:10px;
+}
+
+
+
+
+/*form表格样式*/
+table.form{
+	cellpadding:0;
+	cellspacing:0;
+	bgcolor:#BED9A6;
+	background-color: #efefef;
+	font-weight: lighter;
+	width:98%;
+    margin-top:10px;
+	margin:0 auto;
+	vertical-align: middle;
+	line-height: 24px;
+	text-align:center;
+}
+/*数据表的页眉样式*/
+table.form thead tr{
+	background-color: #CEE1F2;
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 28px;
+	color:#284f9a;
+	
+}
+
+
+table.form tbody tr{
+	color: #3D3D3D;
+	background-color: #FFF;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+}
+table.form tbody th{
+	color: #3D3D3D;
+	background-color: #FFF;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	padding:2px;
+	text-align:right;
+}
+table.form tbody td{
+	color: #3D3D3D;
+	background-color: #FFF;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	padding:2px;
+}
+
+table.form tbody td input{
+	text-align:left;
+}
+/*数据表的页脚样式*/
+table.form tfoot tr{
+	color: #3D3D3D;
+	padding: 2px;
+	background-color: #efefef;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 24px;
+}
+
+
+
+
+/*list数据表的基本样式*/
+table.list{
+	cellpadding:0;
+	cellspacing:0;
+	bgcolor:#BED9A6;
+	background-color: #efefef;
+	font-weight: lighter;
+	width:98%;
+    margin-top:10px;
+	margin:0 auto;
+	vertical-align: middle;
+	line-height: 18px;
+	text-align:center;
+}
+/*数据表的页眉样式*/
+table.list thead tr{
+	background-color: #CEE1F2;
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 28px;
+	color:#284f9a;
+}
+/*数据表的表格体样式*/
+table.list tbody th{
+	color: #3D3D3D;
+	background-color:#e1e1e1;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 24px;
+	padding:2px;
+}
+table.list tbody tr{
+	color: #3D3D3D;
+	background-color: #FFF;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	padding:2px;
+}
+/*数据表的页脚样式*/
+table.list tfoot tr{
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #E6E6E6;
+	vertical-align: middle;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 24px;
+}
+table.list span{
+	margin-left:5px; margin-right:10px;}
+table.list a{
+	text-decoration:underline;}
+
+
+
+/*form样式表触发事件*/
+/*table.form tbody tr{forme : expression(
+onmouseover=function(){this.style.backgroundColor="#FAFAFA"},
+onmouseout=function(){this.style.backgroundColor="#FFFFFF"}) 
+}*/
+/*list样式表触发事件*/
+/*table.list tr{forme : expression(
+onmouseover=function(){this.style.backgroundColor="#F4FBFF"},
+onmouseout=function(){this.style.backgroundColor="#FFFFFF"}) 
+}
+/*input样式表触发事件*/
+/*input{inpe : expression(
+onfocus=function(){
+if(this.type=="text")
+{this.style.border="1px solid red";this.style.height="17px"}
+if(this.type=="submit")
+{}
+},*/
+onblur=function(){this.style.border="1px solid #80A2DC";this.style.height="17px"}
+)
+}

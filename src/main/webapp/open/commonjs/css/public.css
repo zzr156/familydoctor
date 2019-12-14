@@ -1,0 +1,25 @@
+.layui-form-item{
+    margin:10px 0;
+}
+.layui-table tr,table tr{
+    height:40px;
+    background: #FFF;
+    border-bottom:1px solid #DFDFDF;
+}
+table td{
+    padding:5px;
+}
+input.scoreInput{
+    width:40px;
+}
+.layui-progress-text{
+    line-height:35px;
+}
+.layui-table-view, table{
+    /*margin-top: 20px;*/
+    box-shadow: 0 0 20px rgba(221,221,221,0.6);
+}
+html {
+    /*padding:20px;*/
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns:jaxws="http://cxf.apache.org/jaxws"
+	  xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd">
+	<!-- Load CXF modules from cxf.jar -->
+	<!--<import resource="classpath:META-INF/cxf/cxf.xml" />-->
+	<!--<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />-->
+	<!--<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />-->
+	
+	<!-- 如果访问的工程需要身份验证，则必须加上以下配置 -->
+	<!--<bean id="clientPasswordCallback" class="com.xmgrid.webservices.security.ClientPasswordCall" />-->
+
+	<!--<bean id="wss4JOutInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">-->
+		<!--<constructor-arg>-->
+             <!--<map>-->
+                 <!--<entry key="action" value="UsernameToken" />-->
+                 <!--<entry key="passwordType" value="PasswordText" />-->
+                 <!--<entry key="user" value="FHDServer" />-->
+                 <!--<entry key="passwordCallbackRef">-->
+                        <!--<ref bean="clientPasswordCallback" />-->
+                 <!--</entry>-->
+             <!--</map>-->
+        <!--</constructor-arg>-->
+	<!--</bean>-->
+
+	<!--<jaxws:client id="hellServiceClient" serviceClass="com.xmgrid.webservices.server.IHelloService" address="http://localhost:8080/soa/CXFServlet/HellService">-->
+		<!--<jaxws:outInterceptors>-->
+			<!--<bean class="org.apache.cxf.interceptor.LoggingOutInterceptor" />-->
+			<!--<ref bean="wss4JOutInterceptor" />-->
+		<!--</jaxws:outInterceptors>-->
+	<!--</jaxws:client>-->
+</beans>

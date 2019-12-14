@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wls:weblogic-web-app
+        xmlns:wls="http://xmlns.oracle.com/weblogic/weblogic-web-app"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd   
+http://xmlns.oracle.com/weblogic/weblogic-web-app   
+http://xmlns.oracle.com/weblogic/weblogic-web-app/1.2/weblogic-web-app.xsd">
+    <wls:context-root>/emperor-system</wls:context-root>
+    <wls:container-descriptor>
+        <wls:prefer-application-packages>
+            <wls:package-name>javax.persistence.*</wls:package-name>
+            <wls:package-name>antlr.*</wls:package-name>
+            <wls:package-name>org.apache.commons.lang.*</wls:package-name>
+            <wls:package-name>org.joda.time.*</wls:package-name>
+        </wls:prefer-application-packages>
+    </wls:container-descriptor>
+    <wls:session-descriptor>
+        <wls:timeout-secs>7200</wls:timeout-secs>
+        <wls:cookie-name>JSESSIONID1</wls:cookie-name>
+        <wls:encode-session-id-in-query-params>true</wls:encode-session-id-in-query-params>
+    </wls:session-descriptor>
+</wls:weblogic-web-app>  

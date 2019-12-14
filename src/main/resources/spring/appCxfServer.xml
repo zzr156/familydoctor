@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns:jaxws="http://cxf.apache.org/jaxws"
+	  xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd">
+	
+	<!-- Load CXF modules from cxf.jar -->
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	 
+ 	<!--   
+        action:                 UsernameToken               指使用用户名令牌   
+        passwordType:           PasswordText                指密码加密策略，这里直接文本   
+        user:                   FHDServer                   指别名   
+        passwordCallBackRef:    serverPasswordCallback      指消息验证   
+                    为 工程添加身份认证
+    -->
+    <!--<bean id="serverPasswordCallback" class="com.xmgrid.webservices.security.ServerPasswordCall" />-->
+    <!--<bean id="wss4JInInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">-->
+		<!--<constructor-arg>  -->
+            <!--<map>  -->
+                <!--<entry key="action" value="UsernameToken" />  -->
+                <!--<entry key="passwordType" value="PasswordText" />  -->
+                <!--<entry key="user" value="FHDServer" />  -->
+                <!--<entry key="passwordCallbackRef">-->
+                       <!--<ref bean="serverPasswordCallback" />  -->
+                <!--</entry>  -->
+             <!--</map>-->
+        <!--</constructor-arg>-->
+	<!--</bean>-->
+    <!---->
+	 <jaxws:endpoint id="ptFamilyService" implementorClass="com.ylz.webservices.server.impl.PtFamilyServiceImpl" address="/PtFamilyService">
+		<!--<jaxws:inInterceptors>
+			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor" />
+			<ref bean="wss4JInInterceptor" />
+		</jaxws:inInterceptors>-->
+	</jaxws:endpoint>
+
+	<jaxws:endpoint id="signFamilyService" implementorClass="com.ylz.webservices.server.impl.SignFamilyServiceImpl" address="/SignFamilyService">
+		<!--<jaxws:inInterceptors>
+			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor" />
+			<ref bean="wss4JInInterceptor" />
+		</jaxws:inInterceptors>-->
+	</jaxws:endpoint>
+</beans>

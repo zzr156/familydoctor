@@ -1,0 +1,428 @@
+/*   Wvit from /hplus/Pathogeny by H [XR&CO'2014], 06 03 2017 GMT  */
+
+#wrapper {
+    overflow: hidden;
+}
+
+body.mini-navbar .logo-accountinfo {
+    display: none;
+}
+
+.logo-accountinfo {
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    /*padding: 16px 0;*/
+}
+
+.logo-accountinfo a:hover {
+    color: #34cc99;
+    text-decoration: underline;
+}
+
+.minimalize-styl-2 {
+    margin: 10px;
+    padding: auto;
+    font-size: 24px;
+    float: left;
+}
+
+body.mini-navbar .navbar-default .nav>li>a {
+    font-size: 20px;
+}
+
+body.mini-navbar .slimScrollDiv {
+    height: 100%;
+}
+
+.slimScrollDiv {
+    height: 90%;
+}
+
+.nav.navbar-right>li>a {
+    color: #F8F8F8;
+}
+
+.nav.navbar-right>li>a:hover, .nav.navbar-right>li>a:active {
+    color: #676a98;
+}
+
+.page-tabs a.active {
+    background: #586d82;
+    color: #FFFFFF;
+}
+
+.content-tabs {
+    border-bottom: solid 2px #586d82;
+}
+.page-tabs a.active i:hover, .page-tabs a.active:hover {
+    background: #35485a;
+    color: #fff;
+}
+.roll-right.btn-group button {
+    width: 80px;
+}
+
+#content-main {
+    height: calc(100% - 136px);
+    overflow: hidden;
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+.roll-right.J_tabRight {
+    right: 80px;
+}
+
+.roll-right.btn-group {
+    right: 0;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.gray-bg {
+    background-color: #f2f2f2;
+}
+/* master */
+.centerDiv {
+    margin: 0 auto;
+    text-align: center
+}
+
+/* table or form */
+.ibox .ibox-title {
+    color: #666;
+    background: #f8f8f8;
+}
+
+.ibox-title:after {
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+}
+
+.ibox .ibox-title .label {
+    font-size: 12px;
+
+}
+/*.label{
+    background-color: #c2d1e0;
+}*/
+
+.ibox .ibox-content {
+    color: #000;
+    font-size: 13px;
+}
+
+.ibox .ibox-content .table {
+    font-size: 14px;
+    color: #000;
+    background: #fff
+}
+
+.table>tbody>tr>th span {
+    margin-right: 8px;
+}
+
+.table>tbody>tr>td span {
+    margin-left: 10px;
+}
+
+.ibox .clink a {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+.ibox .clink a:hover {
+    text-decoration: none;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.btnBar {
+    border-top: 1px dashed #D7D7D7;
+    padding-top: 10px;
+}
+
+.table-left th, .table-left td {
+    text-align: left;
+}
+
+.table th .control-label {
+    font-size: 14px;
+    color: #000000;
+}
+
+.table thead h4 {
+    color: #585858;
+}
+
+/*login.jsp*/
+.loginBody {
+    background: url("../../images/img/by_loginbg.jpg");
+}
+
+.loginBody .logoName {
+    font-family: 'Conv_fzybksjt', Sans-Serif;
+    font-size: 40px;
+    text-shadow: 0 2px 0 #fff;
+    color: #2a92c6;
+    letter-spacing: 4px;
+    line-height: 40px;
+}
+
+.loginBox {
+    border-top: 3px solid  #f99b1c;
+    width: 348px;
+    height: 302px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 6px #cccccc;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.waveBorder {
+    background: url('../../images/img/by_loginbox_border.png') left top
+    repeat-x;
+    height: 6px;
+    width: 348px;
+    position: absolute;
+    bottom: -6px;
+    z-index: 100;
+}
+
+.loginBody .loginform {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.loginBody .form-control {
+    border-top-color: #dcbebe;
+}
+
+.logo {
+    position: relative;
+    max-width: 440px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.loginBody .loginscreen.middle-box {
+    width: 354px;
+}
+
+.middle-box {
+    max-width: 400px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.logoName:before {
+    content: '';
+    background: url('../../images/img/by_logintit_l.png');
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    top: 80px;
+    left: -180px;
+}
+
+.logoName:after {
+    content: '';
+    background: url('../../images/img/by_logintit_r.png');
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    top: 80px;
+    right: -180px;
+}
+
+@media ( max-width :768px) {
+    .loginBody .logoName {
+        font-size: 36px;
+        letter-spacing: -13px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .logoName:before, .logoName:after {
+        display: none;
+    }
+    .loginBody .loginscreen.middle-box, .loginBody .loginform {
+        width: 80%;
+    }
+    .centerDiv img, .loginBox, .waveBorder {
+        width: 100%;
+    }
+    .middle-box {
+        padding-top: 0;
+    }
+}
+
+/*index.jsp*/
+.headbg {
+    margin-bottom: 0;
+    background-image: url("../../images/img/headbgPang.png");
+    background:linear-gradient( 0deg, #337ab7 0%, #67d8f2 31%, rgb(234,230,132) 70%, rgb(249,165,29) 100%);
+    background: -o-linear-gradient( 0deg, #337ab7 0%, #67d8f2 31%, rgb(234,230,132) 70%, rgb(249,165,29) 100%);
+    background: -ms-linear-gradient( 0deg, #337ab7 0%, #67d8f2 31%, rgb(234,230,132) 70%, rgb(249,165,29) 100%);
+    background: -moz-linear-gradient( 0deg, #337ab7 0%, #67d8f2 31%, rgb(234,230,132) 70%, rgb(249,165,29) 100%);
+    background: -webkit-linear-gradient( 0deg, #337ab7 0%, #67d8f2 31%, rgb(234,230,132) 70%, rgb(249,165,29) 100%);
+    behavior: url(../hplus/htc/PIE.htc);
+}
+
+.navbar-header .cdclogo {
+    vertical-align: middle; /* line-height:60px; */
+    margin-top: 20px;
+}
+
+.headerPic {
+    position: absolute;
+    top: 0;
+    left: 22%;
+}
+
+.menuSwitch {
+    min-height: 54px;
+}
+
+@media ( max-width :768px) {
+    .navbar-header {
+        width: 100%;
+    }
+    .navbar-header .logo_name {
+        font-size: 28px;
+        color: #303640;
+        text-shadow: 0 1px 0 #F8F8F8;
+    }
+    .cdclogo img {
+        width: 50px;
+    }
+    .headerPic {
+        opacity: .3;
+    }
+    .headbg .navbar-right li {
+        position: absolute;
+        right: 0;
+        margin-right: 0;
+        top: 0;
+    }
+    .nav.navbar-right>li>a {
+        background-color: rgba(48, 54, 64, 0.1);
+    }
+}
+
+
+/*20170609*/
+.nav>li.active {
+    border-left: none;
+    background:#3d4e5f;
+}
+.collapse.in {
+    display: block;
+    background: #2e4050;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #35485a;
+}
+.navbar-default .nav>li>a:focus, .navbar-default .nav>li>a:hover {
+    background: #2e4050;
+    color: #33cc99;
+}
+.content-tabs .roll-nav{
+    color: #35485a;
+}
+.content-tabs .roll-nav:hover{
+    color: #586d82;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+.ibox-title {
+    padding: 10px;
+    min-height: 32px;
+    background:#fff;
+}
+.ibox-title h5 {
+    color: #586d82;
+}
+.btn-primary {
+    background-color: #15cca7;
+    border-color: #08bda4;
+    color: #FFF;
+}
+.btn-primary.active, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open .dropdown-toggle.btn-primary {
+    background-color: #08bda4;
+    border-color: #00a58e;
+    color: #FFF;
+}
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #08bda4;
+    border-color: #00a58e;
+}
+ .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color: #00a58e;
+    border-color: #00a58e;
+}
+.btn-warning {
+    background-color: #f89b1d;
+    border-color: #ea931a;
+    color: #FFF;
+}
+.btn-warning.active, .btn-warning:active, .btn-warning:focus, .btn-warning:hover, .open .dropdown-toggle.btn-warning {
+    background-color: #ea931a;
+    border-color: #d6881b;
+    color: #FFF;
+}
+.text-success {
+    color: #0c9efb;
+}
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open>.dropdown-toggle.btn-success.focus, .open>.dropdown-toggle.btn-success:focus, .open>.dropdown-toggle.btn-success:hover {
+    color: #fff;
+    background-color: #1284ce;
+    border-color: #1284ce;
+}
+.table>thead>tr>th {
+    border-bottom: 1px solid #dadada;
+    color: #585858;
+    font-weight: normal;
+}
+.ibox .ibox-content .table {
+    font-size: 13px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: 1px solid #f2f2f2;
+    line-height: 24px;
+    padding: 4px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #e9fff8;
+}
+.ibox-content{
+    padding: 6px 10px 0px 10px;
+}
+label {
+    font-weight: 400;
+    font-size: 13px;
+}
+.form-control, .single-line {
+    font-size: 13px;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    background-color: #e9fff8;
+}

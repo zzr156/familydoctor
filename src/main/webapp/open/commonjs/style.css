@@ -1,0 +1,48 @@
+<!--内部表格-->
+.t-bordered{border:1px solid #ddd;font-size:12px;color:#393939;border-collapse: collapse;}
+.t-bordered tr{white-space:nowrap;}
+.t-bordered td{border:1px solid #ddd;padding: 8px;background-color: #ffffff;}
+<!-- 登录页 -->
+.logheadbg{background:url(../images/login/log_headbg.jpg) repeat-x; height:28px;}
+.logcenterbg{background:#dbe7ee url(../images/login/log_bottom.jpg) center 426px repeat-x; height:536px;}
+.logcenterbox{width:970px; margin:0 auto; text-align:center; padding-top: 38px;}
+.logc_lpart{width:555px; height:397px;background:url(../images/login/log_midl01.jpg) no-repeat; float:left;}
+.logc_lplogo{margin-left:120px; margin-top:124px;}
+.logc_mpart{width:70px; height:397px;background:url(../images/login/log_shadowbg.jpg) no-repeat; float:left;}
+.logc_rpart{width:345px; height:397px; margin-left:625px;}
+.logc_rplogin{margin-top:130px; text-align:left;}
+.logc_rplogin p{margin:10px 0;}
+.logc_rplogin p label{width:60px; display:inline-block; font-size:14px;}
+.logc_rplogin .userinp, .logc_rplogin .passworinp{width:180px; height:28px; line-height:28px; border:1px solid #ddd; text-indent:5px;}
+.input_off{background-color:#FFF;width:180px; height:28px; line-height:28px; border:1px solid #ddd; text-indent:5px;
+}
+.input_move{background-color:#FFFFCC;width:180px; height:28px; line-height:28px; border:1px solid #ddd; text-indent:5px;
+}
+.input_out{background-color:#FFF;width:180px; height:28px; line-height:28px; border:1px solid #ddd; text-indent:5px;
+}
+.logc_rplogin .codeinp{width:80px; height:28px; line-height:28px; border:1px solid #ddd; text-indent:5px;}
+.vcode{position: relative;}
+.vcode img{CURSOR:hand; position: absolute; left:8px; border:1px solid #aed7ed;}
+.logc_rplogin .logbtn{margin-top:20px; margin-left:60px;}
+
+
+.maring-b-10{margin-bottom: 10px;}
+.maring-b-20{margin-bottom: 20px;}
+
+.dyxy-body-bg{background-color: #8c7868;}
+.dyxy-head-bg{background:#8c7868 url('../images/diyiguanjia/dyxy_head_bg.png') center bottom repeat-x;}
+.header {
+    padding: 1em 0;
+    width: 100%;
+    display: inline-block;
+}
+.head-title{height: 50px;padding: 15px 15px;font-size: 18px; line-height: 20px;color:#000; font-family:'微软雅黑 Light';font-weight: 600;text-shadow: 0 1px 0 #b4a599;}
+
+.ibox-title-bar{background-color: #B7A285;  border-color: #7c6d62; color: #333;}
+.ibox-title-bar span{cursor: pointer; margin-left: 5px;color: #8C7868;}
+.ibox-c-item{display: block; background-color: #F1E5D5; border-color: #A59A8B;}
+.image-box{width: 40px; height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px;}
+
+.head-avatar{ padding: 33px 25px;}
+
+.border-t-line{border-top: 1px solid #251B03;}

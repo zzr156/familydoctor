@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.directwebremoting.org/schema/spring-dwr
+http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd" default-autowire="byName" default-lazy-init="true">
+<!--<dwr:configuration>-->
+    <!--<dwr:convert type="bean" class="com.xmgrid.bizDo.cd.po.CdDept"></dwr:convert>-->
+<!--</dwr:configuration>-->
+<!--&lt;!&ndash; dwr类型扫描 &ndash;&gt;-->
+<!--<dwr:annotation-scan scanRemoteProxy="true" scanDataTransferObject="true" base-package="com.xmgrid.view.dwr"/>-->
+    <!--&lt;!&ndash;<dwr:url-mapping/>-->
+  <!--部署项目时, 请把debug设为false-->
+ <!--<dwr:controller id="dwrController" debug="true" />&ndash;&gt;-->
+<!--&lt;!&ndash; dwr使用类型扫描-->
+<!--<dwr:annotation-scan scanDataTransferObject="true" base-package="com.xmgrid.bizDo"/>    &ndash;&gt;-->
+
+
+</beans>

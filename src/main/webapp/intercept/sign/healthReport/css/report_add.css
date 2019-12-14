@@ -1,0 +1,29 @@
+body{
+    margin:2%;
+}
+table{
+    align:center;
+    border:1px;
+    cellpadding:0;
+    width: 1020px;
+    cellspacing:0;
+    text-align:center;
+    vertical-align:center
+}
+td{
+    width:12.5%;
+}
+input{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+#title{
+    font-size:20px ;
+}
+
+#serLog2{
+    height: 200px;
+}

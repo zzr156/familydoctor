@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+<!--<object id="iccard" height="0" classid="clsid:84C4FA72-83B4-4AE8-8178-250A9410E27A"
+		codebase="iccard.cab#version=1,0,2,0"></object >-->
+
+<!--<object id="iccard" height="0" classid="clsid:84C4FA72-83B4-4AE8-8178-250A9410E27A"
+		codebase="iccard.cab#version=1,1,8,1">
+</object>-->
+<object id="iccard" height="0" classid="clsid:84C4FA72-83B4-4AE8-8178-250A9410E27A"
+		codebase="iccard.cab#version=1,0,5,0">
+</object >
+
+	<script type="text/javascript">
+	   function readCard(){
+           var pt = iccard.GetSSSECardno("PT",10);
+	   		var tmp = iccard.GetSSSECardno("3502",10);
+           layer.msg(tmp);
+	   		return;
+	   		document.getElementById("newick").value = tmp;
+	   } 
+
+	</script>
+
+<body>
+<INPUT class=button onclick="readCard()" type=button value="读卡" name=Submit4 style="float:left">
+</body>
+</html>
