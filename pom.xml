@@ -8,7 +8,7 @@
   <name>family-doctor Maven Webapp</name>
   <url>http://maven.apache.org</url>
    <properties>
-  	<spring.version>4.2.5.RELEASE</spring.version>
+  	<spring.version>5.3.19</spring.version>
   	<hibernate.version>5.1.0.Final</hibernate.version>
   	<lucene.version>4.4.0</lucene.version>
   	<struts2.version>2.3.32</struts2.version>
